@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <meta name="author" content="Mike Flores">
     <link rel="shortcut icon" type="image/x-icon" href="http://aux.iconspalace.com/uploads/1421321576980686818.png" />
     <link rel="canonical" href="https://websiteurl.com/">
-    <link rel="stylesheet" href="C:\Users\Michael F\website-template\standard-site\CSS\styles-template.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Official Title</title>
@@ -17,31 +17,34 @@
 
   <body>
     <header>
-      <h1>
-      	<span class="a">Website</span>
-      	<span class="b">Name</span>
-      </h1>
+      <div class="hub">
+	    <span contenteditable="true">Code</span>
+	    <span contenteditable="true">pen</span>
+	</div>
     </header>
 
-    <ul>
-    	  <li><a href="index1.html">Home</a></li>
-    	  <li>
-          <div class="dropdown">
-    	      <a href="news.html">News<i class="fa fa-caret-down"></i></a>
-    	        <div class="dropdown-content">
-    	        <a href="gaming.html">Gaming</a>
-    	        <a href="anime.html">Anime</a>
-    	        </div>
-          </div>
-        </li>
-    	  <li><a href="about.html">About</a></li>
-    	  <li><a href="contact.html">Contact</a></li>
+    <nav>
+		<ul>
+			  <li><a href="index.html" class="effect">Home</a></li>
+			  <li>
+				  <div class="dropdown">
+					  <a href="news.html">News<i class="fa fa-caret-down"></i></a>
+					  <div class="dropdown-content">
+						<a href="categories/gaming.html" class="effect">Gaming</a>
+						<a href="categories/anime.html" class="effect">Anime</a>
+					  </div>
+				  </div>
+			  </li>
+			  <li><a href="about.html" class="effect">About</a></li>
+			  <li><a href="contact.html" class="effect">Contact</a></li>
 
-        <div class="search-container">
-        <script async src="https://cse.google.com/cse.js?cx=012859909435368739953:zfso0ohtg_u"></script>
-        <div class="gcse-search"></div>
-        </div>
-    </ul>
+			<!--<div class="search-container">
+			<script async src="https://cse.google.com/cse.js?cx=012859909435368739953:zfso0ohtg_u"></script>
+			<div class="gcse-search"></div>
+			</div>-->
+
+		 </ul>
+    </nav>
 
     <h2 class ="heading">
     Trending...
@@ -81,7 +84,7 @@
 
   <div class="column">
   <div class = "card">
-  	<a href="noragami.html">
+  	<a href="posts/akashic.html">
   		<img src="https://wallpaperplay.com/walls/full/2/d/0/31350.jpg" width="100%">
   		<div class="desc">Noragami Series Season 3 Release Date, Plot, Updates, New Information 2019</div>
   		<br>
@@ -203,8 +206,8 @@
     </center>
   </footer>
 
-  <!--JAVASCRIPT-->
-  <script src="C:\Users\Michael F\website-template\standard-site\JS\script-template.js"></script>
+  <!--JavaScript-->
+  <script src="js/scripts.js"></script>
 
   </body>
 </html>

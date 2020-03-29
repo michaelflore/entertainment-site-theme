@@ -2,23 +2,20 @@ header {
   background-color: black;
   padding: 5px;
 }
-h1 {
-  color: white;
-  font-family: impact;
-  font-size: 50px;
-  text-align: center;
-}
-
-h1 span.a{
+.hub {
   display: block;
-  position: center;
+  font-family: sans-serif;
+  color: blue;
+  font-size: 6em;
+  text-align: center;
+  padding: 10px;
 }
 
-h1 span.b {
-  background: green;
+.hub span:nth-child(2) {
+  background: #ffffff;
   color: #000000;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 1vw;
+  padding: 0 1vw 1vw 1vw;
   display: inline-block;
 }
 
@@ -41,7 +38,9 @@ ul {
 	    overflow: hidden;
 	    background-color: green;
 }
-li { float:left}
+li { 
+	display: inline-block;
+}
 li a {
 	    display: block;
 	    font-family: impact;
@@ -62,6 +61,20 @@ li a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.effect::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000000;
+	transition: width .3s;
+}
+.effect:hover::after {
+	width: 100%;
+	transition: width .3s;
+}
+
+
 
 .desc {
 	font-family: sans-serif;
