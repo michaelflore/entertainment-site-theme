@@ -1,24 +1,30 @@
-var slideIndex = 0;
+let currentSlide = 0;
 
-showSlides();
 function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
 
-    for (i = 0; i < slides.length; i++) {
+    //Hide Slides
+    for (let i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";
     }
 
-    slideIndex++;
+    currentSlide++;
 
-    if (slideIndex > slides.length) {slideIndex = 1}
+    if (currentSlide > slides.length) {
+        currentSlide = 1;
+    }
 
-    for (i = 0; i < dots.length; i++) {
+    //Hide Dots
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[currentSlide-1].style.display = "block";
+    dots[currentSlide-1].className += " active";
+
     setTimeout(showSlides, 3000);
 }
+
+showSlides();
