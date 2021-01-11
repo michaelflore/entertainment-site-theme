@@ -19,66 +19,382 @@
   </head>
 
   <body>
-    <header>
-      <div class="hub">
-  	    <span>Redux</span>
-  	    <span>Entertainment</span>
-	   </div>
-    </header>
 
-    <nav>
-  		<ul>
-        <li><a href="index.html" class="effect">Home</a></li>
-  			<li>
-          <div class="dropdown">
-            <a href="news.html">News<i class="fa fa-caret-down"></i></a>
+    <div class="grid-container">
 
-  					<div class="dropdown-content">
-              <a href="categories/gaming.html" class="effect">Gaming</a>
-    					<a href="categories/anime.html" class="effect">Anime</a>
-  					</div>
-  				</div>
-  			</li>
-  			<li><a href="about.html" class="effect">About</a></li>
-  			<li><a href="contact.html" class="effect">Contact</a></li>
-      </ul>
+      <!-- Header -->
+      <header id="header">
 
-  		<div class="search-container">
-    		<script async src="https://cse.google.com/cse.js?cx=012859909435368739953:zfso0ohtg_u"></script>
-    		<div class="gcse-search"></div>
-  		</div>
-    </nav>
+        <!-- Time & Social Media -->
+        <div id="dm-container">
+          <div id="date-time">Wednesday Jan 6, 2020 <span id="time">10:00 pm</span></div>
+          <div class="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+        </div>
+        
+        <!-- Website Title and Caption -->
+        <div id="title">
+          <div>Redux Entertainment</div>
+          <div id="caption">Gaming and Movies</div>
+        </div>
+
+        <!-- Navbar -->
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html" class="effect">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <a href="news.html">News <i class="fa fa-caret-down"></i></a>
+
+              <div class="dropdown-content">
+                <a href="categories/gaming.html" class="effect">Gaming</a>
+                <a href="categories/anime.html" class="effect">Anime</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="effect">Tech</a></li>
+          <li><a href="#" class="effect">Sports</a></li>
+          <li><a href="#" class="effect">Western</a></li>
+          <li><a href="#" class="effect">Health</a></li>
+          <li><a href="#" class="effect">World</a></li>
+          <li><a href="#" class="effect">Contact</a></li>
+        </ul>
+      </nav>
+
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+
+        <!-- Tags -->
+        <div class="tags-container">
+          <strong id="top-tags"># Top Tags</strong>
+          <ul class="tags-list">
+            <li><a href="#">discord</a></li>
+            <li><a href="#">youtube</a></li>
+            <li><a href="#">gaming</a></li>
+          </ul>
+        </div>
+
+        <!-- Spinner -->
+        <div class="latest-container">
+          <div class="latest-posts">
+            <h2>Latest Posts</h2>
+          </div>
+          <div class="corner"></div>
+
+          <div class="slider">
+            <div>
+              <a href="#">Course Takeaways</a>
+              <a href="#">Blog Post</a>
+              <a href="#">Optimizing the Header</a>
+              <a href="#">Memes</a>
+              <a href="#">Creating Your Own Community</a>
+              <a href="#">The Industry</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-container">
+          <div class="main-row">
+
+            <!-- Left -->
+            <div>
+              <div id="slider">
+    
+                <!--   Slide 1   -->
+                <div class="slide showing">
+                  <div class="slide-img">
+                    <img src="https://wallpapercave.com/wp/wp2610315.jpg" alt="testimonial" />
+                    
+                    <div class="slide-person">
+                      <div class="post-category"><a href="#">General</a></div>
+                      <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+
+                      <div class="post-meta">
+                        <span class="post-date">
+                          <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                        </span>
+                        <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+                <!--   Slide 2   -->
+                <div class="slide">
+                  <div class="slide-img">
+                    <img src="https://www.setaswall.com/wp-content/uploads/2018/03/Playstation-Wallpaper-30-1920x1080.png" alt="testimonial" />
+                    
+                    <div class="slide-person">
+                      <div class="post-camera"><span><i class="fa fa-camera"></i></span></div>
+                      <div class="post-category"><a href="#">General</a></div>
+                      <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+
+                      <div class="post-meta">
+                        <span class="post-date">
+                          <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                        </span>
+                        <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+                <div class="button-left slider-button">
+                   <span> <i class="fas fa-chevron-left"></i> </span>
+                 </div>
+                
+                 <div class="button-right slider-button">
+                    <span> <i class="fas fa-chevron-right"></i> </span>
+                 </div>
+                  
+              </div>
+            </div>
+
+            <!-- Right -->
+            <div>
+
+              <div>
+                <ul class="nav-tabs">
+                  <li>
+                    <a href="#" class="active"><i class="fa fa-clock-o"></i>Latest</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-fire"></i>Popular</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-bolt"></i>Trending</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content">
+                  <ul class="list-posts">
+
+                    <li>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a href="#">General</a>
+                        </div>
+                        <div class="post-title">
+                          <a href="#"><h5>Course Project & Takeaways</h5></a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="post-content">
+                        <div class="post-category">
+                          <a href="#">General</a>
+                        </div>
+                        <div class="post-title">
+                          <a href="#"><h5>Memes</h5></a>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Next Section with Posts & Sidebar -->
+        <div class="main-section">
+          <div class="section-row">
+
+            <!-- Articles -->
+            <div class="article-container">
+
+              <article class="article-item">
+                <div class="article-inner">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+
+                  <div class="post-description"><p>This is just some description for some content blog post.</p></div>
+                </div>
+              </article>
+
+              <article class="article-item">
+                <div class="article-inner">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+
+                  <div class="post-description"><p>This is just some description for some content blog post.</p></div>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Side Bar -->
+            <aside class="sidebar">
+              <div class="sidebar-content">
+                <!-- Recent Posts -->
+                <div class="widget-container">
+
+                  <div class="widget-title">
+                    <h6>Recent Posts</h6>
+                    <div class="corner"></div>
+                  </div>
+
+                  <ul>
+                    <li><a href="#">Optimizing the Header</a></li>
+                    <li><a href="#">Course Project and Takeaways</a></li>
+                    <li><a href="#">Memes</a></li>
+                  </ul>
+                </div>
+
+                <div class="widget-container">
+
+                  <div class="widget-title">
+                    <h6>Recent Posts</h6>
+                    <div class="corner"></div>
+                  </div>
+
+                  <ul>
+                    <li><a href="#">Optimizing the Header</a></li>
+                    <li><a href="#">Course Project and Takeaways</a></li>
+                    <li><a href="#">Memes</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </aside>
+
+          </div>
+        </div>
+
+        <!-- Missed (Goes on all Pages) -->
+        <div class="missed-container">
+          <div class="missed-inner">
+            <div class="missed-row">
+
+              <!-- 100% -->
+              <div>
+                <div class="widget-title">
+                  <h6>What You Missed</h6>
+                  <div class="corner"></div>
+                </div>
+              </div>
+
+              <!-- div Item -->
+              <div>
+                <div class="missed-post back-img">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
   
-    <div class="slideshow-container">
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+                </div>
+              </div>
 
-      <div class="slides fade">
-        <img src="http://getwallpapers.com/wallpaper/full/1/6/1/189598.jpg">
-        <div class="text">Entertainment</div>
-      </div>
+              <div>
+                <div class="missed-post back-img">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+  
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+                </div>
+              </div>
 
-      <div class="slides fade">
-        <img src="https://www.setaswall.com/wp-content/uploads/2018/03/Playstation-Wallpaper-30-1920x1080.png">
-        <div class="text">Games</div>
-      </div>
+              <div>
+                <div class="missed-post back-img">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+  
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+                </div>
+              </div>
 
-      <div class="slides fade">
-        <img src="https://wallpapercave.com/wp/wp2610315.jpg">
-        <div class="text">Animation</div>
-      </div>
+              <div>
+                <div class="missed-post back-img">
+                  <div class="post-category"><a href="#">General</a></div>
+                  <h4 class="post-title"><a href="#">Course Project and Takeaways</a></h4>
+  
+                  <div class="post-meta">
+                    <span class="post-date">
+                      <i class="fa fa-clock-o"></i><a href="#">Dec 11, 2020</a>
+                    </span>
+                    <a href="#"><i class="fa fa-user-circle-o"></i>Michael Flores</a>
+                  </div>
+                </div>
+              </div>
 
-      <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Footer -->
+      <footer id="footer">
+
+        <div class="footer-container">
+
+          <div class="divide-line"></div>
+
+          <div class="footer-title">
+            <div class="name">
+              Redux Entertainment
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <div>&copy; 2021 Redux Entertainment By Michael Flores</div>
+          <div class="footer-nav">
+            <nav>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </footer>
 
     </div>
 
-
-  
-  <footer>
-    <div>&copy;</div>
-  </footer>
 
   <!--JavaScript-->
   <script src="js/scripts.js"></script>
