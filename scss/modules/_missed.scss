@@ -1,0 +1,78 @@
+/* Missed ALL PAGES */
+div.missed-container {
+  background-color: #eee;
+  padding: 4rem;
+}
+
+div.missed-inner {
+  background-color: #fff;
+}
+
+div.missed-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.missed-row div:first-child {
+  flex: 0 0 100%;
+}
+
+div.missed-row > div:not(:first-child) {
+  flex: 0 0 25%;
+  display: flex;
+  align-items: stretch;
+}
+
+div.missed-row > div {
+  padding: 1rem;
+}
+
+div.missed-post {
+  padding: 1rem;
+}
+
+div.back-img {
+  background-color: #333;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+div.missed-row h4.post-title a,
+div.missed-row div.post-meta a, 
+div.missed-row span.post-date {
+  color: #fff;
+}
+
+div.missed-row h4.post-title a:hover,
+div.missed-row div.post-meta a:hover, 
+div.missed-row span.post-date:hover {
+  color: #d10014;
+}
+
+/* Heading (Some pages) */
+.main-heading {
+  background-color: #fff;
+  padding: 1.5rem 4rem;
+}
+
+.main-heading h2 {
+  color: #222;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.05em;
+
+}
+
+.main-content {
+  padding: 0 1rem;
+  background-color: #fff;
+  font-family: var(--montserrat);
+}
+
+.main-content section p {
+  margin: 0;
+  padding: 1.5rem;
+}

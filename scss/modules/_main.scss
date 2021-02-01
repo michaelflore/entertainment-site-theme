@@ -1,0 +1,130 @@
+/* Main Section w/ Posts and Sidebar */
+div.main-section {
+    background-color: #eee;
+  }
+  div.section-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+  }
+  
+  div.section-row > * {
+    padding: 0 1rem;
+  }
+  
+  div.article-container, div.main-content {
+    flex: 0 0 66.66%;
+  }
+  
+  aside.sidebar {
+    flex: 0 0 33.33%;
+  }
+  
+  article.article-item {
+    background-color: #fff;
+    padding: 1rem 0;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dddcdc;
+    border-radius: 5px;
+  }
+  
+  article.article-item div.article-inner {
+    padding: 1rem;
+  }
+  
+  h4.post-title {
+    color: #212121;
+    margin: 1.5rem 0;
+    line-height: 1.2;
+    font-family: var(--primered);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.05em;
+    padding-right: 0.5rem;
+  }
+  
+  h4.post-title a {
+    display: block;
+    text-decoration: none;
+    color: #212121;
+  }
+  
+  div.post-meta a, span.post-date {
+    color: #bdbdbd;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  div.post-meta a {
+    text-decoration: none;
+  }
+  div.post-meta a:hover {
+    color: var(--primered);
+  }
+  div.post-meta i {
+    color: #999;
+    padding-right: 4px;
+  }
+  span.post-date {
+    margin-right: 1rem;
+  }
+  
+  /* Sidebar */
+  div.widget-container {
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 2rem;
+  }
+  
+  div.widget-title {
+    display: flex;
+    border-bottom: solid var(--primered);
+    margin-bottom: 1rem;
+  }
+  
+  div.widget-title h6 {
+    background-color: var(--primered);
+    color: #fff;
+    font-family: var(--montserrat);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+  }
+  
+  div.widget-container ul {
+    padding: 10px 20px;
+    margin: 0 0 1rem 0;
+    list-style-type: none;
+  }
+  
+  div.widget-container ul li {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #eee;
+    padding: 0.7rem;
+    margin: 0 0 0.7rem;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  div.widget-container ul li:last-child {
+    border: none;
+  }
+  
+  div.widget-container ul li a {
+    font-weight: 400;
+    color: #222;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+  }
+  
+  div.widget-container ul li a:hover {
+    color: var(--primered);
+    padding-left: 10px;
+    transition: all 0.4s ease-in-out 0s;
+  }

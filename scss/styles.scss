@@ -1,0 +1,26 @@
+/* MAIN */
+// CSS IS READ FROM TOP TO BOTTOM
+
+// Partials
+
+@import "partials/variables";
+
+// Pages  and Grid
+
+@import "modules/grid";
+
+@import "modules/header";
+
+@import "modules/footer";
+
+@import "modules/home";
+
+@import "modules/main";
+
+@import "modules/missed";
+
+@import "modules/contact";
+
+// Responsive
+
+@import "breakpoints/queries";

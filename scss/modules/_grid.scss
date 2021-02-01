@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: var(--worksans);
+  margin: 0;
+}
+div.grid-container {
+  display: grid;
+  grid-template-areas: 'header header header header'
+                          'header header header header'
+                          'main main main main'
+                          'main main main main'
+                          'footer footer footer footer';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  /* grid-gap: 1rem; */
+}
+header#header {
+  grid-area: header;
+}
+main.main {
+  grid-area: main;
+}
+footer#footer {
+  grid-area: footer;
+}

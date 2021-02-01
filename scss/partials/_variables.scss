@@ -1,0 +1,13 @@
+$montserrat: 'Montserrat', sans-serif;
+$worksans: 'Work Sans', sans-serif;
+$primered: #d10014;
+$primeblue: #121026;
+$copyright: #090818;
+
+:root {
+    --montserrat: #{$montserrat};
+    --worksans: #{$worksans};
+    --primered: #{$primered};
+    --primeblue: #{$primeblue};
+    --copyright: #{$copyright};
+}
