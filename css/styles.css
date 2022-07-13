@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* MAIN */
 :root {
   --montserrat: Montserrat, sans-serif;
@@ -311,14 +310,16 @@ div.slider div {
   justify-content: center;
   align-items: center;
   margin: 0;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  -moz-animation: scroll-left 2s linear infinite;
   -webkit-animation: scroll-left 2s linear infinite;
   animation: scroll-left 20s linear infinite normal none;
 }
 
 div.slider div:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 div.slider div a {
@@ -329,10 +330,19 @@ div.slider div a {
 }
 
 div.slider div a::before {
-  content: "";
+  content: "\f0a9";
   font-family: FontAwesome;
   font-size: 0.8rem;
   margin-right: 0.5rem;
+}
+
+@-moz-keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
 }
 @-webkit-keyframes scroll-left {
   0% {
@@ -344,9 +354,13 @@ div.slider div a::before {
 }
 @keyframes scroll-left {
   0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 }
@@ -359,7 +373,6 @@ div.slider div a::before {
 
 .slide {
   width: 100%;
-  display: none;
   opacity: 0;
   transition: opacity 1.5s;
 }
@@ -839,4 +852,6 @@ form#contact-form div.name-email div {
     flex-direction: column-reverse;
     padding: 1rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
