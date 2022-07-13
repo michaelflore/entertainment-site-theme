@@ -35,8 +35,5 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', function() {
       nextSlide();
     });
-    
-    // setInterval(function() {
-    //   nextSlide();
-    // }, 3000);
+
   });
