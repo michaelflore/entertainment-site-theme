@@ -93,6 +93,7 @@
     display: none;
     position: absolute;
     background: var(--primered);
+    z-index: 5;
   }
   .dropdown:hover .dropdown-content {
     display: block;
