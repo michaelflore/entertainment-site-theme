@@ -46,7 +46,7 @@ footer#footer {
   padding: 0.7rem 4rem;
 }
 
-span#time {
+#time {
   background-color: #fff;
   color: var(--primered);
   font-weight: 600;
@@ -254,11 +254,11 @@ div.latest-container {
   padding: 0 4rem;
 }
 
-div.latest-posts {
+div.latest-posts-text {
   position: relative;
   margin-right: 24px;
 }
-div.latest-posts::after {
+div.latest-posts-text::after {
   content: "";
   position: absolute;
   top: 0;
@@ -266,7 +266,7 @@ div.latest-posts::after {
   border-top: 34px solid transparent;
   border-left: 24px solid var(--primered);
 }
-div.latest-posts h2 {
+div.latest-posts-text h2 {
   background-color: var(--primered);
   color: #fff;
   font-family: var(--montserrat);
@@ -274,9 +274,10 @@ div.latest-posts h2 {
   font-size: 1rem;
   margin: 0;
   padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
-div.latest-posts span {
+div.latest-posts-text span {
   border-style: solid;
   border-width: 55px 0 0 50px;
   border-left-color: var(--primered);
@@ -305,12 +306,17 @@ div.main-row div:nth-child(2) {
   flex: 0 0 33.33%;
 }
 
-.ct {
-  background-color: teal;
+.latest-posts {
+  flex: 2;
+  overflow: hidden;
+}
+
+.marquee {
+  background-color: #fff;
   position: relative;
   overflow-x: hidden;
 }
-.ct::before, .ct::after {
+.marquee::before, .marquee::after {
   position: absolute;
   background-image: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
@@ -319,39 +325,41 @@ div.main-row div:nth-child(2) {
   z-index: 2;
   pointer-events: none;
 }
-.ct::before {
+.marquee::before {
   top: 0;
   left: 0;
 }
-.ct::after {
+.marquee::after {
   top: 0;
   right: 0;
   transform: rotateZ(180deg);
 }
-.ct .cts {
+.marquee .marquee-inner {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
   min-width: 100%;
 }
-.ct .cts:hover .news-message {
+.marquee .marquee-inner:hover .news-message {
   animation-play-state: paused;
 }
-.ct .cts .news-message {
+.marquee .marquee-inner .news-message {
   display: flex;
   flex-shrink: 0;
   align-items: center;
   animation: slide-left 20s linear infinite;
 }
-.ct .cts .news-message a {
+.marquee .marquee-inner .news-message a {
+  display: flex;
+  align-items: center;
   color: var(--primered);
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 100;
   padding: 0 0.5em;
   text-decoration: none;
 }
-.ct .cts .news-message a::before {
+.marquee .marquee-inner .news-message a::before {
   content: "\f0a9";
   font-family: FontAwesome;
   font-size: 0.8rem;
@@ -372,6 +380,15 @@ div.main-row div:nth-child(2) {
 .carousel-frame {
   position: relative;
   height: 500px;
+}
+.carousel-frame:hover .slider-button {
+  opacity: 1;
+}
+.carousel-frame:hover .button-left {
+  left: 10px;
+}
+.carousel-frame:hover .button-right {
+  right: 10px;
 }
 
 .carousel-track {
@@ -441,16 +458,18 @@ div.post-camera span {
   border: 1px solid #fff;
   border-radius: 20%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
 /*posion the left an right button horizontally */
 .button-left {
-  left: 10px;
+  left: 0;
 }
 
 .button-right {
-  right: 10px;
+  right: 0;
 }
 
 .carousel-dots {
@@ -766,14 +785,8 @@ div.missed-row span.post-date:hover {
 }
 
 .main-content {
-  padding: 0 1rem;
   background-color: #fff;
   font-family: var(--montserrat);
-}
-
-.main-content section p {
-  margin: 0;
-  padding: 1.5rem;
 }
 
 /* CONTACT PAGE ONLY */
@@ -860,10 +873,6 @@ form#contact-form div.name-email div {
   div.missed-row > div:not(:first-child) {
     flex: 0 0 100%;
   }
-
-  /* div.slide-person {
-    height: 100%;
-  } */
 }
 @media (max-width: 600px) {
   h4.post-title {

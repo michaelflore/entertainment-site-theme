@@ -48,7 +48,7 @@ div.latest-container {
   padding: 0 4rem;
 }
 
-div.latest-posts {
+div.latest-posts-text {
   position: relative;
   margin-right: 24px;
 
@@ -69,10 +69,11 @@ div.latest-posts {
     font-size: 1rem;
     margin: 0;
     padding: 0.5rem 1rem;
+    white-space: nowrap;
   }
 }
 
-div.latest-posts  span {
+div.latest-posts-text  span {
   border-style: solid;
   border-width: 55px 0 0 50px;
   border-left-color: var(--primered);
@@ -100,14 +101,19 @@ div.main-row div:nth-child(1) {
 div.main-row div:nth-child(2) {
   flex: 0 0 33.33%;
 }
+
+.latest-posts {
+  flex: 2; 
+  overflow: hidden;
+}
   
-.ct {
-  background-color: teal;
+.marquee {
+  background-color: #fff;
   position: relative;
   overflow-x: hidden;
 
   &::before,
-  &::after{
+  &::after {
     position: absolute;
     background-image: linear-gradient(to right,rgba(255,255,255, 1) 0%,rgba(255,255,255, 0) 100%);
     content: '';
@@ -117,19 +123,19 @@ div.main-row div:nth-child(2) {
     pointer-events: none;
   }
 
-  &::before{
-    top:0;
-    left:0;
+  &::before {
+    top: 0;
+    left: 0;
   }
 
-  &::after{
-    top:0;
-    right:0;
-    transform:rotateZ(180deg);
+  &::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
   }
   
-  .cts{
-    display:flex;
+  .marquee-inner {
+    display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
     min-width: 100%;
@@ -140,16 +146,18 @@ div.main-row div:nth-child(2) {
       }
     }
 
-    .news-message{
+    .news-message {
       display : flex;
       flex-shrink: 0;
       align-items: center;
       animation: slide-left 20s linear infinite;  
 
       a {
+        display: flex;
+        align-items: center;
         color: var(--primered);
         font-family: sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 100;
         padding: 0 0.5em;
         text-decoration: none;
@@ -165,11 +173,11 @@ div.main-row div:nth-child(2) {
       @keyframes slide-left {
         from {
           -webkit-transform: translateX(0);
-                  transform: translateX(0);
+          transform: translateX(0);
         }
         to {
           -webkit-transform: translateX(-100%);
-                  transform: translateX(-100%);
+          transform: translateX(-100%);
         }
       }
     }
@@ -182,6 +190,20 @@ div.main-row div:nth-child(2) {
 .carousel-frame {
   position: relative;
   height: 500px;
+
+  &:hover {
+    .slider-button {
+      opacity: 1;
+    }
+
+    .button-left {
+      left: 10px;
+    }
+
+    .button-right {
+      right: 10px;
+    }
+  }
 }
 
 .carousel-track {
@@ -258,16 +280,18 @@ div.post-camera span {
   border: 1px solid #fff;
   border-radius: 20%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
 /*posion the left an right button horizontally */
 .button-left {
-  left: 10px;
+  left: 0;
 }
 
 .button-right {
-  right: 10px;
+  right: 0;
 }
 
 .carousel-dots {
