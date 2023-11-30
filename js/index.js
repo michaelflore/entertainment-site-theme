@@ -131,7 +131,6 @@ function fadeCarousel(carouselFrame) {
   
     carouselFrame.addEventListener("mouseenter", function() {
         clearInterval(playInterval);
-        playInterval = null;
     });
   
     carouselFrame.addEventListener("mouseleave", function() {
@@ -139,11 +138,10 @@ function fadeCarousel(carouselFrame) {
     });
   
     document.addEventListener("visibilitychange", function() {
-        if(document.visibilityState === "visible" && !playInterval) {
+        if(document.visibilityState === "visible") {
             playInterval = setInterval(slideForward, 4000); 
         } else {
             clearInterval(playInterval);
-            playInterval = null;
         }
     });
   }
